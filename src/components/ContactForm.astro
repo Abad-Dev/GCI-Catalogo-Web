@@ -1,0 +1,58 @@
+<div class="container mb-4" id="contactenos">
+    <h1 class="text-center" >Cont&aacute;ctenos !</h1>
+    <form action="https://formsubmit.co/developers@guiacalidad.com" method="POST">
+        <div class="row">
+            <div class="col-12 py-2">
+                <label for="contactService" class="form-label">Servicio de su interés:</label>
+                <select class="form-select form-control" id="contactService" aria-label=".form-select-sm example" style="cursor: pointer; background-color: rgb(255, 255, 255); border: 1px solid rgb(206, 212, 218);" name="Plan">
+                    <option selected="">Seleccione el servicio</option>
+                    <option value="1">Renovaci&oacute;n de P&aacute;gina web</option>
+                    <option value="2">Creaci&oacute;n de P&aacute;gina web</option>
+                    <option value="3">Elaboraci&oacute;n de Tienda Virtual</option>
+                    <option value="4">Otro (Software a medida)</option>
+                  </select>
+            </div>
+            <div class="col-12 col-lg-6">
+                <label for="contactEmail" class="form-label">Refiéranos su nombre:</label>
+                <input type="text" name="Nombre" id="contactEmail" class="w-100 form-control" placeholder="Con quien contactarnos" required="" style="background-color: rgb(255, 255, 255); border: 1px solid rgb(206, 212, 218);">
+            </div>
+            <div class="col-12 col-lg-6">
+                <label for="contactNum" class="form-label">Nro. de teléfono:</label>
+                <input type="number" class="form-control" id="contactNum" placeholder="123456789" name="Nro.Telefonico" required="" style="background-color: rgb(255, 255, 255); border: 1px solid rgb(206, 212, 218);">
+            </div>
+        </div>
+        <div class="row py-3">
+            <div class="col-12">
+                <div class="form-floating">
+                    <textarea class="form-control" style="min-height: 200px; background-color: rgb(255, 255, 255); border: 1px solid rgb(206, 212, 218);" placeholder="Escriba aquí" id="floatingTextarea" name="Adicional:"></textarea>
+                    <label for="floatingTextarea"><small>Indicaciones o preguntas</small></label>
+                  </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 text-center">
+            <button type="submit" id="submit" >Enviar</button>
+        </div>
+    </form>
+</div>
+
+<style>
+    #submit {
+        border: 2px solid var(--primary-color);
+        padding-top: 5px;
+        padding-bottom: 5px;
+        border-radius: 10px;
+        width: 100%;
+        max-width: 200px;
+        background-color: transparent;
+
+        transition-duration: .4s;
+        font-weight: 600;
+        cursor: default;
+    }
+
+    #submit:hover{
+        background-color: var(--thertiary-color);
+        border-color: transparent;
+    }
+</style>

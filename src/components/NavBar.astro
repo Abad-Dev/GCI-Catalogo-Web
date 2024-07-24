@@ -1,0 +1,62 @@
+---
+import { Image } from 'astro:assets';
+import LogoMin from '../images/GCI.png'
+---
+
+<nav class="container-fluid">
+    <div class="container py-2 px-0 d-flex align-items-center">
+        <a href="/#" title="Home">
+            <Image src={LogoMin} alt="Go to Home" loading='eager'>
+        </a>
+        <ul>
+            <a href="#servicios">
+                <li>
+                    Servicios
+                </li>
+            </a>
+            <a href="#clientes">
+                <li>Clientes</li>
+            </a>
+            <a href="#contactenos">
+                <li>Cont&aacute;ctenos</li>
+            </a>
+        </ul>
+    </div>
+</nav>
+
+<style>
+    .container-fluid{
+        position: fixed;
+        top: 0;
+        left: 0;
+
+        background-color: #EEF1F5;
+
+        z-index: 10;
+    }
+
+    img{
+         height: 45px;
+         width: 45px;
+    }
+
+    ul {
+        display: flex;
+        list-style-type: none;
+        margin: 0 15px;
+        padding: 0;
+        margin-left: auto;
+    }
+
+    ul li {
+        margin: 0 10px;
+        transition-duration: .23s;
+    }
+    ul li:hover {
+        font-weight: 700;
+    }
+
+    html{
+        scroll-padding-top: 60px;
+    }
+</style>

@@ -1,0 +1,135 @@
+---
+import { Image } from 'astro:assets';
+import Layout from '../layouts/Layout.astro';
+import Client from '../components/Client.astro';
+import NavBar from '../components/NavBar.astro';
+import ContactForm from '../components/ContactForm.astro'
+import Footer from '../components/Footer.astro'
+
+import Renovacion from '../images/renovacion.jpg';
+import Creacion from '../images/creacion.jpg';
+import TiendaVirtual from '../images/ecommerce.jpg';
+---
+
+<Layout title='GCI - Software a medida y Páginas Web de calidad - Servicios que ofrecemos'>
+    <NavBar />
+
+    <main class="container p-3 p-md-5 services-container mb-5" id="servicios">
+        <h3>Nuestros Servicios:</h3>
+        <article class="row">
+            <div class="col-12 col-md-6 col-lg-4">
+                <section class="service-card">
+                    <p>Precio: Desde </p>
+                    <h2>S/ 400</h2>
+                    <div class="h-separator my-2" style="width: 30px;"></div>
+                    <h4>Renovaci&oacute;n de p&aacute;gina web</h4>
+                    <p>Actualiza tu p&aacute;gina web antigua a las tecnolog&iacute;as actuales, con mejor rendimiento, dise&ntilde;o y compatibilidad con tel&eacute;fonos m&oacute;viles.</p>
+                    <Image src={Renovacion} alt="" loading='eager'/>
+                </section>
+            </div>
+            <div class="col-12 col-md-6 my-3 col-lg-4">
+                <section class="service-card">
+                    <h4>Creaci&oacute;n de p&aacute;gina web</h4>
+                    <Image src={Creacion} alt="" loading='eager' />
+                    <p>Precio: Desde </p>
+                    <h2>S/ 600</h2>
+                    <div class="h-separator my-2" style="width: 30px;"></div>
+                    <p>Dise&ntilde;a con nosotros una nueva p&aacute;gina web para impulsar tu negocio, hazte conocido en medios digitales!</p>
+                </section>
+            </div>
+            <div class="col-12 col-md-12 col-lg-4">
+                <section class="service-card">
+                    <Image src={TiendaVirtual} alt="" loading='eager'/>
+                    <h4>Elaboraci&oacute;n de Tienda Virtual</h4>
+                    <p>Vende tus productos por medio de tu propia p&aacute;gina web. Impulsa tu negocio hacia la digitalizaci&oacute;n con tu propio E-Commerce donde podr&aacute;s mostrar y vender tus productos con imagen, descripci&oacute;n y precios. Adem&aacute;s los clientes podr&aacute;n pagar a trav&eacute;s de la web.</p>
+                    <div class="h-separator my-2" style="width: 30px;"></div>
+                    <p>Precio: Desde </p>
+                    <h2>S/ 1200</h2>
+                </section>
+            </div>
+        </article>
+    </main>
+
+    <div class="container py-5" id="clientes">
+        <div class="row">
+            <div class="col-12">
+                <h1 class="text-center mb-5">Nuestros Clientes:</h1>
+                <Client 
+                    backgroundImage='../src/images/clients/fronton.jpeg'
+                    title="Front-On"
+                    description='Pagina con Catalogo de productos, desarrollado en Wordpress para el Negocio Front On'
+                    side='left'
+                    href="https://fronton.com.pe/"
+                />
+                <div class="h-separator my-5" style="width: 40px;"></div>
+                <Client 
+                    backgroundImage='../src/images/clients/Humanase.jpeg'
+                    title="Humanase"
+                    description='Pagina web para el negocio de recursos humanos Humanase'
+                    side='right'
+                    href="https://humanase.com/"
+                />
+                <div class="h-separator my-5" style="width: 40px;"></div>
+                <Client 
+                    backgroundImage='../src/images/clients/eleomartt.jpg'
+                    title="Eleomartt"
+                    description='Pagina para el negocio de producción Audiovisual Eleomartt'
+                    side='left'
+                    href="https://eleomartt.com/"
+                />
+                <div class="h-separator my-5" style="width: 40px;"></div>
+                <Client 
+                    backgroundImage='../src/images/clients/real_security.png'
+                    title="Real Security"
+                    description='Pagina para el negocio de seguridad y alarmas Real Security'
+                    side='right'
+                    href="https://realsecurityperu.com/"
+                />
+                <div class="h-separator my-5" style="width: 40px;"></div>
+                <Client 
+                    backgroundImage='../src/images/clients/espacio_hotels.png'
+                    title="Espacio Hotels"
+                    description='Pagina para el negocio Espacio Hotels, incluye múltiples páginas de catalogo, noticias, etc. Desarrollado en Wordpress'
+                    side='left'
+                    href="https://espaciohotels.com/"
+                />
+            </div>
+        </div>
+    </div>
+
+    <ContactForm />
+
+    <Footer />
+</Layout>
+
+<style>
+    .h-separator {
+        height: 2px;
+        border-radius: 2px;
+        background-color: var(--primary-color);
+        width: 100%;
+        margin: 0 auto;
+    }
+    .services-container{
+        margin-top: 100px;
+        background-color: var(--thertiary-color); 
+        border-radius: 18px
+    }
+    .services-container .col-12{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .service-card{
+        display: flex;
+        flex-direction: column;
+        padding: 30px;
+        background-color: white;
+        border-radius: 15px;
+        max-width: 380px;
+    }
+    .service-card img{
+        max-width: 100%;
+        height: auto;
+    }
+</style>
